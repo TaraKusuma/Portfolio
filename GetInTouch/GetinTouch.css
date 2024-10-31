@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*::selection{
+    background: #1b0808;
+    color: #550f19;
+    color: #cfc7c4;
+
+}
+
+body{
+    background: #1b0808;
+    color: #cfc7c4;
+};
+
+
+/* NAVBAR */
+.navbar {
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+}
+
+.navdiv {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1b0808;
+    /* z-index: 1000; */
+    padding: 10px;
+    position: fixed;
+
+}
+
+.logo a {
+    font-size: 35px;
+    font-weight: 600;
+    color: #cfc7c4;
+    font-family: "Playfair";
+    text-decoration: none;
+    margin-left: 30%;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    margin-right: 30px;
+}
+
+li {
+    display: inline-block;
+}
+
+li a {
+    color: #cfc7c4;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 50px;
+    text-decoration: none;
+    font-family: "Playfair";
+}
+
+
+/* Hamburger Icon Styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: #cfc7c4;
+    margin-bottom: 4px;
+    border-radius: 5px;
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 768px) {
+    .navdiv {
+        justify-content: space-between;
+    }
+
+    ul {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 60px;
+        right: 0;
+        width: 40%;
+        height: 100vh;
+        background-color: #cfc7c4;
+        box-shadow: -10px 0 10px rgba(255, 1, 1, 0.1);
+    }
+
+    ul.show {
+        display: flex;
+    }
+
+    li {
+        margin-top: 20%;
+        text-align: center;
+        /* background-color: #c7001e; */
+        justify-content: center;        
+        
+
+    }
+
+    li a{
+        font-size: 18px;
+        justify-content: center;
+        text-align: center;
+        margin: 0;
+        color: #1b0808;
+        /* background-color: red; */
+        transition: color;
+    }
+
+    li a:hover{
+        color: #550f19;
+        text-decoration: underline;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* Optional: Animation for the menu appearing */
+ul.show {
+    animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/*  */
+
+.me-screen{
+    width: 100%;
+    height: 90vh;
+}
+
+.me-content{
+    width: 100%;
+    max-height: fit-content;
+    padding: 83px 0px 0px 0px;
+}
+
+.me{
+    width: 100%;
+    max-height: 10%;
+    margin-top: 3%;
+    height: auto;
+    /* background-color: black; */
+    text-align: center;
+    margin-bottom: 7%;
+}
+
+.me h2{
+    font-family: "PlayFair";
+    font-size: 35px;
+    font-weight: 400px;
+    color: #cfc7c4;
+    /* text-align: center; */
+}
+
+.contact-me{
+    margin:10%;
+    margin-top: 0%;
+    height: fit-content;
+    /* background-color: red; */
+    display: grid;
+    gap: 45px;
+    grid-template-columns: 1fr 1fr;
+    /* justify-content: space-around; */
+}
+
+.contact{
+    display: flex;
+    background-color: bisque;
+    padding: 10px;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-decoration: none;
+    transition: background-color 0.3 ease;
+}
+
+.contact:hover{
+    background-color: #cfc7c4;
+}
+
+.contact img{
+    margin-right: 10px;
+    width: 40px;
+}
+
+.contact p{
+    font-family: "Merriweather Sans";
+    color: #550f19;
+    font-weight: 400;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+@media (max-width: 700px){
+    .contact-me{
+        margin:10%;
+        margin-top: 5%;
+        height: fit-content;
+        /* background-color: red; */
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        grid-template-columns: 1fr 1fr;
+        /* justify-content: space-around; */
+    }
+
+    .contact{
+        display: flex;
+        background-color: bisque;
+        padding: 10px;
+        align-items: center;
+        border-radius: 5px;
+        border: 1px solid black;
+        text-decoration: none;
+        transition: background-color 0.3 ease;
+    }
+
+    .contact img{
+        margin-right: 10px;
+        width: 35px;
+    }
+    
+    .contact p{
+        font-family: "Merriweather Sans";
+        color: #550f19;
+        font-weight: 400;
+        font-size: 18px;
+        font-weight: 600;
+    }
+}
+
+
+/* footer */
+
+.footer{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    background-color: #cfc7c4;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer p{
+    color: #1b0808;
+    font-family: "Playfair";
+    font-size: 18px;
+    font-weight: 600;
+}
